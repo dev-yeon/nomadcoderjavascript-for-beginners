@@ -1,25 +1,23 @@
-//integer 
-//float 
+// const loginForm = document.getElementById("login-form");
 
-//constant 인 variable을 만듦, 
-//const a의 값만  바꾸면 되니까 코드 변경이 쉬워짐 
-let a = 5;
-let b = 2;
-let myName = "yeon"; // Js는 camel 케이스를 사용 
-const veryVeryVeryLongName = "Yeooooooooooooooon";
-
-console.log(544444);
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
 
-console.log( a + b );
-console.log( a * b );
-console.log( a / b );
+function onLoginBtnClick() {
+    // console.dir(loginInput);
+    // console.log(loginInput.value);
+    // console.log("Click!!!!!!");
 
-// variable 는 값을 저장하거나 유지하는 역할
+    const username = loginInput.value;
+    console.log(username);
+    // if(username === "") {
+    //     alert("Please write your name."); 
+
+    // } else if(username.length) {
+    //     alert("Your name is too long.")
+    // }
+}
 
 
-console.log("Hello, " + myName); 
-
-myName = "yeoni"
-
-console.log("your name is " +  myName);
+loginButton.addEventListener("click", onLoginBtnClick)
